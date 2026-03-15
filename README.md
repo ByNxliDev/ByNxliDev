@@ -1,16 +1,23 @@
-## Hi there 👋
+# 👋 Hola, soy Alan
 
-<!--
-**ByNxliDev/ByNxliDev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Programador junior en C# aprendiendo WinUI, WPF y todo lo que pueda romper antes de que funcione.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🔧 Habilidades
+- C# / XAML
+- .NET, WinUI
+- Git y GitHub
+
+---
+
+## 🚀 Qué hago
+- Proyectos personales para practicar
+- Mejorar mis skills día a día
+- Tratar de que mi código no duela a nadie 😅
+
+---
+
+## 📫 Contacto
+- GitHub: [github.com/tuusuario](https://github.com/tuusuario)
+- Correo: tuemail@mail.com
