@@ -9,13 +9,13 @@ Actualmente estoy en el desarrollo de mis habilidades en C#
 - C# / XAML
 - .NET, WinUI
 - Git y GitHub
-- SQL
+- SQL (Supabase)
 
 ---
 
 ## 🚀 Qué hago
 - Proyectos personales para practicar
-- Mejorar mis skills día a día
+- Mejorar día a día
 - Tratar de que mi código no duela a nadie 😅
 
 ---
