@@ -1,1 +1,1107 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nxli · Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            --bg: #0f0d13;
+            --surface: #17141f;
+            --surface2: #1e1a28;
+            --surface3: #252032;
+            --border: #2e2840;
+            --border2: #3d3554;
+            --text: #ede8f5;
+            --muted: #7c7490;
+            --muted2: #a89dc0;
+            --purple: #9c6fff;
+            --purple-dim: #7c4fd4;
+            --purple-bg: #1c1630;
+            --purple-bg2: #241d3a;
+            --tonal: #d0bcff;
+            --on-purple: #1a0d33;
+            --radius: 20px;
+            --radius-sm: 12px;
+            --radius-pill: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Comfortaa', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden
+        }
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 28px
+        }
+
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+            line-height: 1;
+            vertical-align: middle;
+            user-select: none
+        }
+
+        nav {
+            padding: 32px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.5px
+        }
+
+        .logo span {
+            color: var(--purple)
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px
+        }
+
+        nav a {
+            color: var(--muted2);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            transition: all .2s;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        nav a:hover {
+            background: var(--surface2);
+            color: var(--text)
+        }
+
+        nav a .material-symbols-rounded {
+            font-size: 16px
+        }
+
+        .hero {
+            padding: 72px 0 56px
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 32px
+        }
+
+        .eyebrow-text {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--muted2);
+            letter-spacing: 1.5px;
+            text-transform: uppercase
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 9vw, 76px);
+            font-weight: 700;
+            line-height: 1.0;
+            letter-spacing: -2px;
+            margin-bottom: 8px
+        }
+
+        .hero h1 .name {
+            color: var(--text);
+            font-size: 18px;
+        }
+
+        .hero h1 .alias {
+            color: var(--purple);
+            display: block
+        }
+
+        .hero-desc {
+            font-size: 15px;
+            color: var(--muted2);
+            max-width: 460px;
+            line-height: 1.85;
+            margin: 28px 0 40px;
+            font-weight: 300
+        }
+
+        .hero-desc strong {
+            color: var(--text);
+            font-weight: 500
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        .btn {
+            padding: 13px 24px;
+            border-radius: var(--radius-pill);
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none
+        }
+
+        .btn .material-symbols-rounded {
+            font-size: 18px
+        }
+
+        .btn-filled {
+            background: var(--purple);
+            color: var(--on-purple)
+        }
+
+        .btn-filled:hover {
+            background: var(--tonal)
+        }
+
+        .btn-tonal {
+            background: var(--purple-bg2);
+            color: var(--tonal)
+        }
+
+        .btn-tonal:hover {
+            background: var(--surface3)
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 56px 0 0
+        }
+
+        .chips-row {
+            padding: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .chip {
+            padding: 9px 16px;
+            border-radius: var(--radius-pill);
+            background: var(--purple-bg);
+            border: 1px solid var(--border2);
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--tonal);
+            display: flex;
+            align-items: center;
+            gap: 7px
+        }
+
+        .chip .material-symbols-rounded {
+            font-size: 16px;
+            color: var(--purple)
+        }
+
+        section {
+            padding: 72px 0
+        }
+
+        .sec-header {
+            margin-bottom: 48px
+        }
+
+        .sec-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin-bottom: 10px
+        }
+
+        .sec-title {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            color: var(--text)
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 3px
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 0;
+            padding: 32px;
+            transition: background .2s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .project-card:first-child {
+            border-radius: var(--radius) var(--radius) 0 0
+        }
+
+        .project-card:last-child {
+            border-radius: 0 0 var(--radius) var(--radius)
+        }
+
+        .project-card:hover {
+            background: var(--surface2)
+        }
+
+        .project-card:hover::after {
+            opacity: 1
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            gap: 12px
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.3px
+        }
+
+        .project-status {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .project-status .material-symbols-rounded {
+            font-size: 13px
+        }
+
+        .status-active {
+            background: var(--purple-bg);
+            color: var(--purple);
+            border: 1px solid var(--purple-dim)
+        }
+
+        .status-done {
+            background: var(--surface3);
+            color: var(--muted2);
+            border: 1px solid var(--border)
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--muted2);
+            line-height: 1.85;
+            margin-bottom: 20px;
+            font-weight: 300
+        }
+
+        .project-learning {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: var(--purple-bg);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            margin-bottom: 20px
+        }
+
+        .learning-icon .material-symbols-rounded {
+            font-size: 18px;
+            color: var(--purple);
+            margin-top: 2px
+        }
+
+        .learning-text {
+            font-size: 12px;
+            color: var(--tonal);
+            line-height: 1.7;
+            font-weight: 300
+        }
+
+        .learning-text strong {
+            font-weight: 600
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px
+        }
+
+        .stack-tag {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .5px;
+            padding: 5px 12px;
+            background: var(--surface3);
+            border-radius: var(--radius-pill);
+            color: var(--muted2);
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .stack-tag .material-symbols-rounded {
+            font-size: 13px;
+            color: var(--purple)
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px
+        }
+
+        .value-card {
+            background: var(--surface);
+            padding: 32px;
+            transition: background .2s
+        }
+
+        .value-card:nth-child(1) {
+            border-radius: var(--radius) 0 0 0
+        }
+
+        .value-card:nth-child(2) {
+            border-radius: 0 var(--radius) 0 0
+        }
+
+        .value-card:nth-child(3) {
+            border-radius: 0 0 0 var(--radius)
+        }
+
+        .value-card:nth-child(4) {
+            border-radius: 0 0 var(--radius) 0
+        }
+
+        .value-card:hover {
+            background: var(--surface2)
+        }
+
+        .value-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: var(--purple-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px
+        }
+
+        .value-icon .material-symbols-rounded {
+            font-size: 22px;
+            color: var(--purple)
+        }
+
+        .value-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.2px
+        }
+
+        .value-desc {
+            font-size: 12px;
+            color: var(--muted2);
+            line-height: 1.8;
+            font-weight: 300
+        }
+
+        .about-wrap {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 40px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .about-wrap::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: var(--purple-bg);
+            opacity: .6;
+            pointer-events: none
+        }
+
+        .about-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--purple);
+            letter-spacing: .5px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .about-name .material-symbols-rounded {
+            font-size: 16px
+        }
+
+        .about-title {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px
+        }
+
+        .about-body {
+            font-size: 13px;
+            color: var(--muted2);
+            line-height: 1.95;
+            font-weight: 300;
+            max-width: 520px
+        }
+
+        .about-body strong {
+            color: var(--text);
+            font-weight: 500
+        }
+
+        .about-sig {
+            display: inline-block;
+            margin-top: 32px;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--purple);
+            letter-spacing: -0.5px
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column
+        }
+
+        .tl-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 0
+        }
+
+        .tl-date {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--purple);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 24px 20px 0 0;
+            border-right: 1px solid var(--border);
+            text-align: right
+        }
+
+        .tl-content {
+            padding: 20px 0 28px 28px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .tl-item:last-child .tl-content {
+            border-bottom: none
+        }
+
+        .tl-event {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .tl-event .material-symbols-rounded {
+            font-size: 16px;
+            color: var(--purple)
+        }
+
+        .tl-detail {
+            font-size: 12px;
+            color: var(--muted2);
+            font-weight: 300;
+            line-height: 1.7
+        }
+
+        /* CONTACT FORM */
+        .contact-wrap {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 40px
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 20px
+        }
+
+        .form-group label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted2);
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .form-group label .material-symbols-rounded {
+            font-size: 14px;
+            color: var(--purple)
+        }
+
+        .form-group input,
+        .form-group textarea {
+            background: var(--surface2);
+            border: 1px solid var(--border2);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: var(--text);
+            transition: border-color .2s, background .2s;
+            outline: none;
+            width: 100%;
+            resize: none
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--muted)
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--purple);
+            background: var(--purple-bg)
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        .form-submit {
+            margin-top: 8px;
+            width: 100%
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 13px
+        }
+
+        .form-success {
+            display: none;
+            background: var(--purple-bg);
+            border: 1px solid var(--purple-dim);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--tonal);
+            align-items: center;
+            gap: 10px
+        }
+
+        .form-success.visible {
+            display: flex
+        }
+
+        .form-success .material-symbols-rounded {
+            color: var(--purple);
+            font-size: 20px;
+            flex-shrink: 0
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px
+        }
+
+        .footer-logo {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--muted)
+        }
+
+        .footer-logo span {
+            color: var(--purple)
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px
+        }
+
+        .footer-links a {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            letter-spacing: .5px;
+            transition: color .2s;
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .footer-links a .material-symbols-rounded {
+            font-size: 14px
+        }
+
+        .footer-links a:hover {
+            color: var(--text)
+        }
+
+        @media(max-width:540px) {
+            .values {
+                grid-template-columns: 1fr
+            }
+
+            .value-card:nth-child(1) {
+                border-radius: var(--radius) var(--radius) 0 0
+            }
+
+            .value-card:nth-child(2) {
+                border-radius: 0
+            }
+
+            .value-card:nth-child(3) {
+                border-radius: 0
+            }
+
+            .value-card:nth-child(4) {
+                border-radius: 0 0 var(--radius) var(--radius)
+            }
+
+            .form-row {
+                grid-template-columns: 1fr
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            <div class="logo">Nxli</div>
+            <ul>
+                <li><a href="#proyectos"><span class="material-symbols-rounded">folder_open</span>Proyectos</a></li>
+                <li><a href="#sobre"><span class="material-symbols-rounded">person</span>Sobre mí</a></li>
+                <li><a href="#contacto"><span class="material-symbols-rounded">mail</span>Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-text">México, CD JUAREZ, CHIH.</span>
+            </div>
+            <h1>
+                <span class="name">Hola, soy Alan.</span>
+                <span class="alias">Soy Nxli.</span>
+            </h1>
+            <p class="hero-desc">
+                Programador en formación. No espero saber todo para <strong>construir cosas reales</strong> — aprendo
+                haciéndolas. Cada proyecto es una prueba de que la iniciativa vale más que el título.
+            </p>
+            <div class="hero-cta">
+                <a class="btn btn-filled" href="#proyectos">
+                    <span class="material-symbols-rounded">rocket_launch</span>
+                    Ver mis proyectos
+                </a>
+                <a class="btn btn-tonal" href="#sobre">
+                    <span class="material-symbols-rounded">waving_hand</span>
+                    Quién soy
+                </a>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="chips-row">
+            <div class="chip"><span class="material-symbols-rounded">auto_stories</span>Autodidacta</div>
+            <div class="chip"><span class="material-symbols-rounded">build</span>Proyectos reales</div>
+            <div class="chip"><span class="material-symbols-rounded">trending_up</span>Siempre aprendiendo</div>
+            <div class="chip"><span class="material-symbols-rounded">location_on</span>México</div>
+            <div class="chip"><span class="material-symbols-rounded">handshake</span>Open to work</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2
+            style="font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple);margin-bottom:16px">
+            Habilidades actuales</h2>
+        <div class="chips-row" style="padding-top:0">
+            <div class="chip"><span class="material-symbols-rounded">database</span>Supabase</div>
+            <div class="chip"><span class="material-symbols-rounded">mode_heat</span>Firebase</div>
+            <div class="chip"><span class="material-symbols-rounded">commit</span>Git</div>
+            <div class="chip"><span class="material-symbols-rounded">html</span>HTML / CSS / JS</div>
+            <div class="chip"><span class="material-symbols-rounded">code_xml</span>C# / XAML</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <section id="proyectos">
+            <div class="sec-header">
+                <div class="sec-eyebrow">Proyectos</div>
+                <div class="sec-title">Lo que he construido</div>
+            </div>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-title">DIDAP</div>
+                        <div class="project-status status-active">
+                            <span class="material-symbols-rounded">pending</span>Activo
+                        </div>
+                    </div>
+                    <p class="project-desc">Un CRUD en C# para la venta de productos, con un diseño primitivo y simple,
+                        casualmente estara en desarrollo y actualizaciones constantes.</p>
+                    <div class="project-learning">
+                        <div class="learning-icon"><span class="material-symbols-rounded">lightbulb</span></div>
+                        <div class="learning-text"><strong>Lo que aprendí aquí:</strong> El uso correcto de varias
+                            herramientas de desarrollo, como Git, GitHub, Visual Studio, ademas de aprender a utilizar
+                            C# y .NET usando WPF</div>
+                    </div>
+                    <div class="stack">
+                        <span class="stack-tag"><span class="material-symbols-rounded">code</span>C# / XAML</span>
+                        <span class="stack-tag"><span class="material-symbols-rounded">logo_dev</span>.NET</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-title">Next RBX</div>
+                        <div class="project-status status-done">
+                            <span class="material-symbols-rounded">pending</span>Inactivo
+                        </div>
+                    </div>
+                    <p class="project-desc">Una app android de cursos de roblox, creado con Kotlin  y XML, usando a Firebase Firestore como Base de datos</p>
+                    <div class="project-learning">
+                        <div class="learning-icon"><span class="material-symbols-rounded">lightbulb</span></div>
+                        <div class="learning-text"><strong>Lo que aprendí aquí:</strong> El uso de activitys, fragments y elementos, ademas del la implementacion de permisos
+                        y optimizaciones de codigo.</div>
+                    </div>
+                    <div class="stack">
+                        <span class="stack-tag"><span class="material-symbols-rounded">android</span>Android</span>
+                        <span class="stack-tag"><span class="material-symbols-rounded">code</span>Kotlin / XML</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-title">nullble</div>
+                        <div class="project-status status-active">
+                            <span class="material-symbols-rounded">pending</span>Activo
+                        </div>
+                    </div>
+                    <p class="project-desc">Un sitio web de cursos de programacion, usando a supabase como backend y authentication</p>
+                    <div class="project-learning">
+                        <div class="learning-icon"><span class="material-symbols-rounded">lightbulb</span></div>
+                        <div class="learning-text"><strong>Lo que aprendí aquí:</strong> El uso de APIs, proteccion de base de datos y reglas RLS de Supabase, ademas de optimizacion y estructuracion de el sitio para optmizarlo y adaptarlo a escala.</div>
+                    </div>
+                    <div class="stack">
+                        <span class="stack-tag"><span class="material-symbols-rounded">html</span>HTML</span>
+                        <span class="stack-tag"><span class="material-symbols-rounded">css</span>CSS</span>
+                        <span class="stack-tag"><span class="material-symbols-rounded">javascript</span>JS</span>
+                        <span class="stack-tag"><span class="material-symbols-rounded">bolt</span>Supabase</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-title">Naxawave</div>
+                        <div class="project-status status-active">
+                            <span class="material-symbols-rounded">pending</span>Activo
+                        </div>
+                    </div>
+                    <p class="project-desc">Mi propia compañia aun no registrada, es dueña de varios proyectos y
+                        sistemas y servicios que posteriormente ire subiendo.</p>
+                    <div class="project-learning">
+                        <div class="learning-icon"><span class="material-symbols-rounded">lightbulb</span></div>
+                        <div class="learning-text"><strong>Lo que aprendí aquí:</strong> Como poder administrar los
+                            datos, flujos y escalabilidad de una empresa, ademas de aprender a utilizar HTML / CSS / JS
+                        </div>
+                    </div>
+                    <div class="stack">
+                        <span class="stack-tag"><span class="material-symbols-rounded">code</span>HTML / CSS / JS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="sec-header">
+                <div class="sec-eyebrow">Forma de trabajar</div>
+                <div class="sec-title">Lo que me define</div>
+            </div>
+            <div class="values">
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-symbols-rounded">construction</span></div>
+                    <div class="value-title">Construyo para aprender</div>
+                    <div class="value-desc">No espero un curso. Si algo me interesa, lo hago. Cada proyecto nació de una
+                        necesidad o curiosidad real.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-symbols-rounded">bolt</span></div>
+                    <div class="value-title">Iniciativa propia</div>
+                    <div class="value-desc">DIDAP y Naxawave son proyectos que nacieron de mi iniciativa propia, con un
+                        proposito claro en mi, poder entender como funciona el mundo del desarrollo de software.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-symbols-rounded">trending_up</span></div>
+                    <div class="value-title">Aprendo rápido</div>
+                    <div class="value-desc">Me adapto facilmente, la forma en la que funcionan las cosas, y como puedo
+                        mejorar estos sistemas.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-symbols-rounded">hub</span></div>
+                    <div class="value-title">Pienso en sistemas</div>
+                    <div class="value-desc">No solo escribo código que funciona — pienso en la seguridad, arquitectura y
+                        mantenibilidad desde el inicio, y como puedo mejorar estos sistemas haciendolos mas escalables
+                        en un futuro.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="sec-header">
+                <div class="sec-eyebrow">Sobre mí</div>
+                <div class="sec-title">La historia corta</div>
+            </div>
+            <div class="about-wrap">
+                <div class="about-name">
+                    <span class="material-symbols-rounded">person_pin</span>
+                    Alan · Nxli
+                </div>
+                <div class="about-title">17 años, cero base, proyectos reales.</div>
+                <div class="about-body">
+                    Empecé donde muchos empiezan sin saberlo — en <strong>Roblox Studio</strong>, creando experiencias y
+                    entendiendo por primera vez que el código puede construir mundos. De ahí salté solo a <strong>HTML,
+                        CSS y
+                        JS</strong>, sin cursos, sin guía. Después vino <strong>C#</strong>.<br><br>
+                    En todos esos entornos soy principiante — y lo digo con orgullo. Porque no es ignorancia, es
+                    trayectoria.
+                    Cada tecnología nueva es un reto que al principio me complica, y que siempre termino
+                    resolviendo.<br><br>
+                    Me gusta entender cómo fluyen las cosas antes de programarlas. Por eso trabajo con <strong>diagramas
+                        de
+                        flujo</strong> — pensar primero, codear después. Es parte de cómo construyo flujos de trabajo
+                    eficientes
+                    aunque esté aprendiendo.<br><br>
+                    Soy dedicado, motivado, y tengo claro hacia dónde voy: progresar. Un commit a la vez.
+                </div>
+                <div class="about-sig">ByNxli ✦</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="sec-header">
+                <div class="sec-eyebrow">Trayectoria</div>
+                <div class="sec-title">Cómo llegué aquí</div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-date">Inicio</div>
+                    <div class="tl-content">
+                        <div class="tl-event"><span class="material-symbols-rounded">start</span>Primeras líneas de
+                            código</div>
+                        <div class="tl-detail">Inicie en roblox studio, creando experiencias y aprendiendo los
+                            fundamentos basicos de la programación.</div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Después</div>
+                    <div class="tl-content">
+                        <div class="tl-event"><span class="material-symbols-rounded">security</span>Primeros pasos en el
+                            desarrollo web</div>
+                        <div class="tl-detail">Continue con HTML, CSS y algo de JavaScript, creando páginas web
+                            sencillas y aprendiendo los fundamentos del desarrollo web.</div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Luego</div>
+                    <div class="tl-content">
+                        <div class="tl-event"><span class="material-symbols-rounded">architecture</span>Naxawave Studios
+                        </div>
+                        <div class="tl-detail">Cree mi propia proxima marca que definira todo mi ecosistema de
+                            proyectos.</div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Ahora</div>
+                    <div class="tl-content">
+                        <div class="tl-event"><span class="material-symbols-rounded">school</span>DIDAP</div>
+                        <div class="tl-detail">Mi primera aplicacion hecha en .NET y C#, un CRUD para gestionar
+                            productos y ventas.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="sec-header">
+                <div class="sec-eyebrow">Contacto</div>
+                <div class="sec-title">Hablemos</div>
+            </div>
+            <div class="contact-wrap">
+                <form id="contact-form" action="https://formspree.io/f/xvzwbkon" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>
+                                <span class="material-symbols-rounded">person</span>
+                                Nombre
+                            </label>
+                            <input type="text" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="material-symbols-rounded">mail</span>
+                                Correo
+                            </label>
+                            <input type="email" name="email" placeholder="tu@correo.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span class="material-symbols-rounded">subject</span>
+                            Asunto
+                        </label>
+                        <input type="text" name="subject" placeholder="¿De qué quieres hablar?" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span class="material-symbols-rounded">chat</span>
+                            Mensaje
+                        </label>
+                        <textarea name="message" rows="5" placeholder="Cuéntame..." required></textarea>
+                    </div>
+                    <input type="text" name="_gotcha" style="display:none">
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-filled">
+                            <span class="material-symbols-rounded">send</span>
+                            Enviar mensaje
+                        </button>
+                    </div>
+                </form>
+                <div class="form-success" id="form-success">
+                    <span class="material-symbols-rounded">check_circle</span>
+                    Mensaje enviado. Te respondo pronto.
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">ByNxli ✦ · 2026</div>
+            <div class="footer-links">
+                <a href="https://github.com/bynxlidev"><span class="material-symbols-rounded">code</span>GitHub</a>
+                <a href="https://naxawave-studios.web.app"><span class="material-symbols-rounded">globe</span>Naxawave
+                    Studios</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const success = document.getElementById('form-success');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-rounded">hourglass_top</span> Enviando...';
+
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                form.style.display = 'none';
+                success.classList.add('visible');
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = '<span class="material-symbols-rounded">send</span> Enviar mensaje';
+                alert('Hubo un error. Intenta de nuevo.');
+            }
+        });
+    </script>
+</body>
+
+</html>
