@@ -7,7 +7,7 @@ Actualmente estoy en el desarrollo de mis habilidades en C#
 
 ## 🔧 Habilidades en progreso
 - C# / XAML
-- .NET, WinUI
+- .NET, WPF
 - Git y GitHub
 - SQL (Supabase)
 
