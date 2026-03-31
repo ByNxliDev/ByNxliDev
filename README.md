@@ -1,7 +1,9 @@
 
 <div align="center">
-  <img width="100%" height="100px" src="https://krikey-ai.ghost.io/content/images/2025/06/GIF-Maker-Halloween-GIF-Transparent.GIF" />
+  <img width="100%" height="100px" src="https://media.tenor.com/lxSjtlze2CsAAAAM/skeleton-mad-skeleton.gif" />
 </div>
+
+
 
 <div align="left">
   <img height="100" src="https://xoegikqtggxikhubusar.supabase.co/storage/v1/object/public/profile-images-bucket/37bae449-3661-4093-b96f-03cdf6ce9d72/avatar.webp?t=1774858235877" style="border-radius: 50%;" />
