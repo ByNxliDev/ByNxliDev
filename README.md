@@ -13,7 +13,7 @@
 
 ### 🚀 Desarrollador Junior C# | Entusiasta de WPF, WinUI y la arquitectura de software
 
-Soy un programador explorando este mundo, entusiasta de la **POO**. Actualmente, mi enfoque es el desarrollo de aplicaciones Windows con **.NET y WPF**, además de WebApps con **ASP.NET Core**.
+Soy un programador explorando este mundo, entusiasta de la **POO**. Actualmente, mi enfoque es el desarrollo de aplicaciones Windows con **.NET y WPF**.
 
 ---
 
