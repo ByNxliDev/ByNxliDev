@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img width="100%" height="100px" src="https://media.tenor.com/lxSjtlze2CsAAAAM/skeleton-mad-skeleton.gif" />
+  <img width="100%" height="100px" src="https://media.tenor.com/rERIfw92tLUAAAAj/skeleton-dance.gif" />
 </div>
 
 
