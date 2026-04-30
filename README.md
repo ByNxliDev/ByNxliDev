@@ -40,7 +40,7 @@ Soy un programador explorando este mundo, entusiasta de la **POO**. Actualmente,
 ---
 
 ### En qué estoy trabajando
-* **[Financial-Dashboard-WPF](https://github.com/bynxlidev/tu-repo):** Dashboard financiero con persistencia JSON, filtros LINQ y una interfaz diseñada en XAML.
+* **[Financial-Dashboard-WPF](https://github.com/ByNxliDev/DIDAP-Financial-Dashboard):** Dashboard financiero con persistencia JSON, filtros LINQ y una interfaz diseñada en XAML.
 * **Dominio de POO:** Refactorizando mis primeros proyectos de consola para implementar patrones de diseño profesionales.
 * **Exploración de WinUI 3:** Creando interfaces nativas y modernas para Windows.
 
