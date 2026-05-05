@@ -9,7 +9,7 @@
   <img height="100" src="https://xoegikqtggxikhubusar.supabase.co/storage/v1/object/public/profile-images-bucket/37bae449-3661-4093-b96f-03cdf6ce9d72/avatar.webp?t=1774858235877" style="border-radius: 50%;" />
 </div>
 
-# ¡Hola! Soy Alan 👋 (bynxlidev) :)
+# ¡Hola! Soy Alan 👋! (bynxlidev) :)
 
 ### 🚀 Desarrollador Junior C# | Entusiasta de WPF, WinUI y la arquitectura de software
 
