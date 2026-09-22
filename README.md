@@ -47,11 +47,14 @@
 ### ¿Que aprendi hasta ahora?
 Lo que llevo aprendido hasta la ultima actualizacion de este MarkDown es:
 
+ - C++ 
  - Estructuras
  - Matrices
  - Bucles While, For, DoWhile
  - Variables
  - Funciones
+
+#========================
 
  - C#
  - Tipos de datos
